@@ -16,7 +16,7 @@ def discover_plugins(jenkins_war):
     plugins = []
     with zipfile.ZipFile(jenkins_war) as j_war:
         for pn_hpi in j_war.infolist():
-            regex = r'^WEB-INF/plugins/(.*).hpi$'
+            regex = r'^WEB-INF/(detached-plugins|plugins)/(.*).hpi$'
             if re.match(regex, pn_hpi.filename):
                 pn_data = j_war.read(pn_hpi.filename)
                 pn_stm = io.BytesIO(pn_data)
