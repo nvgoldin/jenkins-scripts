@@ -6,13 +6,13 @@ of Jenkins, especially if there are pinned plugins that override the current ver
 
 Usage:
 ```shell
-./plugins_discover.py /path/to/jenkins.war
+./plugins_discover.py --jenkins_war /path/to/jenkins.war
 ```
 
 Example:
 ```shell
 > wget https://updates.jenkins-ci.org/download/war/2.16/jenkins.war
-> ./plugins_discover.py jenkins.war
+> ./plugins_discover.py --jenkins_war jenkins.war
 
 script-security : 1.13
 antisamy-markup-formatter : 1.1
