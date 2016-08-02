@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import zipfile
 import io
 import re
@@ -42,8 +43,8 @@ def main():
     args = parser.parse_args()
     plugins = discover_plugins(args.jenkins_war)
     for plugin in plugins:
-        print '%s : %s' % (plugin.get('Short-Name'),
-                           plugin.get('Plugin-Version'))
+        print('%s : %s' % (plugin.get('Short-Name'),
+                           plugin.get('Plugin-Version')))
 
 
 if __name__ == '__main__':
